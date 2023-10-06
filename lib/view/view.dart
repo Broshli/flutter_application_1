@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/calculator_view.dart';
 
 class ViewPage extends StatefulWidget {
   const ViewPage({super.key});
@@ -10,17 +11,10 @@ class ViewPage extends StatefulWidget {
 class _ViewPageState extends State<ViewPage> {
   @override
   Widget build(BuildContext context) {
-    return const Material(
-      color: Color.fromARGB(255, 140, 255, 184),
-      child: Center(
-        child: Text(
-          "Hello World",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.blue,
-          ),
-        ),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.blue[300],
+        body: const CalculatorView(),
       ),
     );
   }
