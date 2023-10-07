@@ -1,8 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CalculatorView extends StatelessWidget {
+class CalculatorView extends StatefulWidget {
   const CalculatorView({super.key});
+
+  @override
+  State<CalculatorView> createState() => _CalculatorViewState();
+}
+
+class _CalculatorViewState extends State<CalculatorView> {
+  int x = 0;
+  int y = 0;
+  int z = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +24,16 @@ class CalculatorView extends StatelessWidget {
             height: 20,
           ),
           const DispalyOne(hint: "Enter Second number"),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            z.toString(),
+            style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           const Spacer(),
           Row(
             // crossAxisAlignment: CrossAxisAlignment.center,
