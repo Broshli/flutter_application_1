@@ -13,17 +13,25 @@ class _CalculatorViewState extends State<CalculatorView> {
   int y = 0;
   int z = 0;
 
+  final displayOneController = TextEditingController();
+  final displayTwoController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
         children: [
-          const DispalyOne(hint: "Enter First number"),
+          CalculatorDisplay(
+            hint: "Enter First number",
+            controller: displayOneController,
+          ),
           const SizedBox(
             height: 20,
           ),
-          const DispalyOne(hint: "Enter Second number"),
+          CalculatorDisplay(
+            hint: "Enter Second number",
+            controller: displayTwoController,
+          ),
           const SizedBox(
             height: 20,
           ),
@@ -64,13 +72,15 @@ class _CalculatorViewState extends State<CalculatorView> {
   }
 }
 
-class DispalyOne extends StatelessWidget {
-  const DispalyOne({
+class CalculatorDisplay extends StatelessWidget {
+  const CalculatorDisplay({
     super.key,
     this.hint = "Enter a number",
+    required this.controller,
   });
 
   final String? hint;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {

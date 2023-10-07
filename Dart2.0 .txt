@@ -5,3 +5,4 @@
 5. Spacer
 6. num varialbe can tack value of Int and double.
 7. AppLifeCycle
+8. TextEditingController() is used to read, control and modify text entered into text fields.
