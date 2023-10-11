@@ -1,8 +1,17 @@
 1. Multiple runApp(const MyApp()) in one main dart file.
+
 2. In materialApp() we have theme and within theme we have "primarySwatch" which only accepts Material Colos.
+
 3. SafeArea() Does have top: true, and bottom: true functionality which helps us to remove or add the safe area of the display.
+
 4. In Stf or Stl Widget constructor we use "required this.hint" and we also put some value in it like "this.hint = 'Enter a Number',".
+
 5. Spacer
+
 6. num varialbe can tack value of Int and double.
+
 7. AppLifeCycle
+
 8. TextEditingController() is used to read, control and modify text entered into text fields.
+
+9. Controller is a variable which will help for TextEditingController 1

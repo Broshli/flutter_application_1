@@ -85,6 +85,7 @@ class CalculatorDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       keyboardType: TextInputType.number,
       autofocus: true,
       decoration: InputDecoration(
